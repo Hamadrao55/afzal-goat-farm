@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afzal Goat Farm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Afzal Goat Farm Dashboard</h1>
+        
+        <div class="row mb-4">
+            <div class="col-md-4"><div class="card p-3 bg-success text-white">Income: {{ income }}</div></div>
+            <div class="col-md-4"><div class="card p-3 bg-danger text-white">Expenses: {{ expenses }}</div></div>
+            <div class="col-md-4"><div class="card p-3 bg-primary text-white">Net Balance: {{ net_balance }}</div></div>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h3>Add New Goat</h3>
+            <form action="/add_goat" method="post" class="row g-3">
+                <div class="col-md-3"><input name="tag_id" class="form-control" placeholder="Tag ID" required></div>
+                <div class="col-md-3"><input name="breed" class="form-control" placeholder="Breed" required></div>
+                <div class="col-md-3"><input name="weight" type="number" step="0.1" class="form-control" placeholder="Weight" required></div>
+                <div class="col-md-3"><button type="submit" class="btn btn-dark w-100">Register Goat</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
